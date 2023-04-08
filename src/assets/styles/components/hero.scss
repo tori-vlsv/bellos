@@ -133,14 +133,18 @@
       width: 238px;
       margin-bottom: 20px;
     }
+    &__button {
+      padding: 10px 11px 8px 50px;
+    }
     &__text {
       margin-top: 0;
       font-size: 14px;
       line-height: 21px;
-      margin-bottom: 20px;
+      margin-bottom: 13px;
+      text-align: center;
     }
     &__application {
-      margin-top: 0;
+      margin-top: 22px;
       gap: 20px;
       justify-content: center;
     }
@@ -149,7 +153,7 @@
       line-height: 21px;
     }
     &__slider {
-      margin: 20px -15px 8px;
+      margin: 0 -15px 28px;
       width: calc(100% + 30px);
       &__navigation {
         display: none;
