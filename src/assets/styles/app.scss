@@ -1,0 +1,29 @@
+@import "./utils/reset";
+
+/*
+  Переменные
+*/
+@import "./base/variables";
+
+/*
+  Шрифты и типография
+*/
+@import "./base/fonts";
+@import "./base/typography";
+
+/*
+  Базовые стили
+*/
+@import "./base/global";
+
+/*
+  Миксины
+*/
+@import "./mixins/breadcrumbs";
+
+/*
+  Компоненты
+*/
+@import "./components/header";
+@import "./components/footer";
+@import "./components/hero";

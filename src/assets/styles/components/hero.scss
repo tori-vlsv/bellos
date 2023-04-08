@@ -1,0 +1,162 @@
+.hero {
+  padding: 5px 0 0;
+  &__logo {
+    height: 135px;
+    width: 287px;
+    margin: 0 auto;
+  }
+  &__text {
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 35px;
+  }
+  &__application {
+    margin-top: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Buran USSR";
+  }
+  &__subtitle {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 8px 7px 8px 50px;
+    background-color: $white;
+    border-radius: 15px;
+    &__text {
+      font-size: 20px;
+      line-height: 23px;
+      color: $black-300;
+      transition: color 0.3s;
+      will-change: color;
+    }
+    &:hover {
+      .hero__button__text {
+        color: $black;
+      }
+    }
+  }
+  &__slider {
+    margin-top: 40px;
+    &__navigation {
+      width: 160px;
+      position: absolute;
+      z-index: 10;
+      bottom: 20px;
+      right: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $white;
+      border-radius: 10px;
+      padding: 8px 12px;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: 2px;
+        height: 28px;
+        background-color: $black;
+        border-radius: 9px;
+      }
+    }
+    &-prev,
+    &-next {
+      transition: opacity 0.3s, transform 0.3s;
+      will-change: opacity, transform;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .swiper {
+    max-height: 400px;
+    height: 100%;
+    &-wrapper {
+      height: 100%;
+      align-items: stretch;
+    }
+    &-button {
+      &-disabled {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+    &-slide {
+      height: auto;
+      opacity: 0.5;
+      width: auto;
+      transition: opacity 0.3s;
+      will-change: opacity;
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+      &-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .hero {
+    &__application {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    &__slider {
+      &__navigation {
+        right: 20px;
+      }
+    }
+    .swiper {
+      max-height: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 35px 0 0;
+    &__logo {
+      height: 112px;
+      width: 238px;
+      margin-bottom: 20px;
+    }
+    &__text {
+      margin-top: 0;
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 20px;
+    }
+    &__application {
+      margin-top: 0;
+      gap: 20px;
+      justify-content: center;
+    }
+    &__subtitle {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &__slider {
+      margin: 20px -15px 8px;
+      width: calc(100% + 30px);
+      &__navigation {
+        display: none;
+      }
+    }
+    .swiper {
+      max-height: 231px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+extends ./layouts/master.pug
+
+block title
+  title Bellos | Главная
+
+block basicSeo
+  meta(content="Главная страница" name="description")
+  meta(content="Главная, страница" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="./manifest.json" rel="manifest" crossorigin)
+  meta(content="./browserconfig.xml" name="msapplication-config")
+
+block content
+  main
+    include ./mixins/breadcrumbs.pug
+    +breadcrumbs([ { href: '', title: 'О компании' } ])
+    include ./components/hero.pug

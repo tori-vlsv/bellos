@@ -1,0 +1,33 @@
+.breadcrumbs {
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    img {
+      width: 25px;
+      height: 25px;
+      margin: 0 10px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      a,
+      p {
+        font-family: "Bebas Neue";
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 18px;
+        color: $black;
+        padding-top: 3.5px;
+      }
+      a {
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.3s;
+        will-change: border-color;
+        &:hover {
+          border-color: $black;
+        }
+      }
+    }
+  }
+}
